@@ -7,6 +7,7 @@ require('keybinds')
 require('custom-filetypes')
 
 -- Configuring Plugins
+require('configure-git-blame')
 require('configure-indent-blankline')
 require('configure-telescope')
 require('configure-colorizer')

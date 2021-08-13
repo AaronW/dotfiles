@@ -42,6 +42,7 @@ return require('packer').startup(function()
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
   use 'glepnir/dashboard-nvim'
+  use('f-person/git-blame.nvim')
 
   -- Theme
   use 'folke/tokyonight.nvim'
