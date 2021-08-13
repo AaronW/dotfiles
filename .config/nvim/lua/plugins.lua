@@ -14,13 +14,14 @@ return require('packer').startup(function()
   }
   use 'nvim-telescope/telescope-symbols.nvim'
   use 'numtostr/FTerm.nvim'
-  --use {'iamcco/markdown-preview.nvim', ft = 'markdown', run = 'cd app && yarn install'}
+  use {'iamcco/markdown-preview.nvim', ft = 'markdown', run = 'cd app && yarn install'}
 
   -- Tim Pope
   use 'tpope/vim-sleuth'
 
   -- LSP + Syntax
   use 'neovim/nvim-lspconfig'
+  use('ray-x/lsp_signature.nvim')
   use 'hrsh7th/nvim-compe'
   use 'onsails/lspkind-nvim'
   use({ 'dag/vim-fish', ft = 'fish' })
