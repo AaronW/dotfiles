@@ -44,6 +44,13 @@ return require('packer').startup(function()
   use 'norcalli/nvim-colorizer.lua'
   use 'glepnir/dashboard-nvim'
   use('f-person/git-blame.nvim')
+  use 'kosayoda/nvim-lightbulb'
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+    end
+  }
 
   -- Theme
   use 'folke/tokyonight.nvim'
