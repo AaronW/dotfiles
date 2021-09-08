@@ -1,14 +1,10 @@
 function check_globals
-    if test -z "(ls ~/Library/Fonts | grep 'Fira Code')"
+    if test -z "(ls ~/Library/Fonts | grep Fira\ Code)"
         echo 'Install Fira Code NerdFont: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode'
     end
 
     if test -z "(ls ~/Library/Fonts | grep nonicons)"
         echo 'Install nonicons font: https://github.com/yamatsum/nonicons'
-    end
-
-    if ! type thefuck >/dev/null
-        echo 'Install thefuck: https://github.com/nvbn/thefuck'
     end
 
     if ! type starship >/dev/null
@@ -65,10 +61,6 @@ function check_globals
 
     if ! type eslint >/dev/null
         echo 'Install eslint globally for vim integration: yarn global add eslint'
-    end
-
-    if ! type tslint >/dev/null
-        echo 'Install tslint globally for vim integration: yarn global add tslint'
     end
 
     if ! type bash-language-server >/dev/null
