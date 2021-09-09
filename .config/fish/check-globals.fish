@@ -3,6 +3,10 @@ function check_globals
         echo 'Install Fira Code NerdFont: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode'
     end
 
+    if test -z "(ls ~/Library/Fonts | grep JetBrainsMono\ Nerd\ Font\ Mono)"
+        echo 'Install JetBrainsMono NerdFont: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono'
+    end
+
     if test -z "(ls ~/Library/Fonts | grep nonicons)"
         echo 'Install nonicons font: https://github.com/yamatsum/nonicons'
     end
