@@ -45,6 +45,7 @@ return require('packer').startup(function()
   use 'glepnir/dashboard-nvim'
   use('f-person/git-blame.nvim')
   use 'kosayoda/nvim-lightbulb'
+  use 'RRethy/vim-illuminate'
   use {
     "folke/which-key.nvim",
     config = function()
