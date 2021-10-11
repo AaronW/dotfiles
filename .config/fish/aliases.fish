@@ -15,6 +15,12 @@ alias ll="ls -l --git"
 alias l="ls -laH"
 alias lg="ls -lG"
 
+function nuke
+    docker kill (docker ps --format "{{.Names}}")
+    killall node
+    killall hugo
+  end
+
 function nuke-docker
     set -l docker_container_names (docker ps --format "{{.Names}}")
     if test -n "$docker_container_names"
@@ -23,4 +29,3 @@ function nuke-docker
         echo "No docker containers running."
     end
   end
-
