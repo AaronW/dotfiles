@@ -16,7 +16,9 @@ g.nvim_tree_auto_ignore_ft = { 'fzf', 'term', 'terminal' }
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
 require'nvim-tree'.setup {
-  lsp_diagnostics = true,
+  diagnostics = {
+    enable = true,
+  },
   view = {
     width = 40,
     auto_resize = false,
