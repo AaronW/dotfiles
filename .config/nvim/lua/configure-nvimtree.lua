@@ -1,8 +1,6 @@
 local g = vim.g
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
---g.nvim_tree_auto_open = 1
-g.nvim_tree_auto_close = 1
 g.nvim_tree_follow = 1
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_git_hl = 1
@@ -16,11 +14,14 @@ g.nvim_tree_auto_ignore_ft = { 'fzf', 'term', 'terminal' }
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
 require'nvim-tree'.setup {
+  auto_close = true,
   diagnostics = {
     enable = true,
   },
+  open_on_setup = true,
+  open_on_tab = true,
   view = {
-    width = 40,
+    width = 30,
     auto_resize = false,
     mappings = {
       custom_only = true,
