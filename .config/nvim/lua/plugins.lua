@@ -4,13 +4,12 @@ return require('packer').startup(function()
 
   -- Common Dependency
   --use 'nvim-lua/plenary.nvim'
-  --use 'nvim-lua/popup.nvim'
 
   -- Editing enhancements and tools
   --use 'windwp/nvim-autopairs'
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    requires = {{'nvim-lua/plenary.nvim'}}
   }
   use 'nvim-telescope/telescope-symbols.nvim'
   use 'numtostr/FTerm.nvim'
@@ -52,6 +51,7 @@ return require('packer').startup(function()
       require("which-key").setup {}
     end
   }
+  use({ 'mrjones2014/dash.nvim', requires = { 'nvim-telescope/telescope.nvim' } })
 
   -- Theme
   use 'folke/tokyonight.nvim'
