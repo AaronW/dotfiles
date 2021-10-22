@@ -2,9 +2,6 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Common Dependency
-  --use 'nvim-lua/plenary.nvim'
-
   -- Editing enhancements and tools
   --use 'windwp/nvim-autopairs'
   use {
@@ -38,7 +35,10 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'airblade/vim-gitgutter'
-  use 'hoob3rt/lualine.nvim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
   use 'glepnir/dashboard-nvim'
