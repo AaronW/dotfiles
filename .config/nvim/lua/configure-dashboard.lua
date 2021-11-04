@@ -17,7 +17,7 @@ g.dashboard_custom_header = {
 '⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿',
 }
 
-vim.g.dashboard_custom_section = {
+g.dashboard_custom_section = {
     session = {
       description = { '  Load Last Session   <leader>sl' },
       command = 'SessionLoad',
