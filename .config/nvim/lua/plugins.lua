@@ -51,7 +51,12 @@ return require('packer').startup(function()
       require("which-key").setup {}
     end
   }
-  use({ 'mrjones2014/dash.nvim', requires = { 'nvim-telescope/telescope.nvim' } })
+  use {
+    'rcarriga/nvim-notify',
+    config = function()
+      vim.notify = require('notify')
+    end
+  }
 
   -- Theme
   use 'folke/tokyonight.nvim'
