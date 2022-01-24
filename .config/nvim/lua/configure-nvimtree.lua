@@ -3,7 +3,6 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_git_hl = 1
-g.nvim_tree_gitignore = 1
 g.nvim_tree_add_trailing = 1
 g.nvim_tree_special_files = {}
 g.nvim_tree_auto_ignore_ft = { 'fzf', 'term', 'terminal' }
