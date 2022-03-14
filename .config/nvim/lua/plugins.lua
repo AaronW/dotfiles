@@ -1,63 +1,72 @@
-return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+local paths = require('paths')
 
-  -- Editing enhancements and tools
-  --use 'windwp/nvim-autopairs'
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/plenary.nvim'}}
-  }
-  use 'nvim-telescope/telescope-symbols.nvim'
-  use 'numtostr/FTerm.nvim'
-  use {'iamcco/markdown-preview.nvim', ft = 'markdown', run = 'cd app && yarn install'}
+local packer = require('packer')
 
-  -- Tim Pope
-  use 'tpope/vim-sleuth'
+packer.startup({
+  function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  -- LSP + Syntax
-  use 'neovim/nvim-lspconfig'
-  use('ray-x/lsp_signature.nvim')
-  use 'hrsh7th/nvim-compe'
-  use 'onsails/lspkind-nvim'
-  use({ 'dag/vim-fish', ft = 'fish' })
-  use 'sheerun/vim-polyglot'
-  --use {'prettier/vim-prettier', run = 'yarn install'}
-  use 'folke/trouble.nvim'
-  use 'fatih/vim-go' -- just used for gohtmltmpl syntax highlighting
-  use 'p00f/nvim-ts-rainbow'
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use {'nvim-treesitter/playground', cmd = {'TSPlaygroundToggle'}}
+      -- Dependencies of other plugins
+      use('nvim-lua/plenary.nvim')
 
-  -- UI + Utils
-  use 'kyazdani42/nvim-web-devicons'
-  use {'yamatsum/nvim-nonicons', requires = {'kyazdani42/nvim-web-devicons'}}
-  use 'kyazdani42/nvim-tree.lua'
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'airblade/vim-gitgutter'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-  use 'akinsho/nvim-bufferline.lua'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'glepnir/dashboard-nvim'
-  use('f-person/git-blame.nvim')
-  use 'kosayoda/nvim-lightbulb'
-  use 'RRethy/vim-illuminate'
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {}
-    end
-  }
-  use {
-    'rcarriga/nvim-notify',
-    config = function()
-      vim.notify = require('notify')
-    end
-  }
+    -- Editing enhancements and tools
+    -- use(require('configure.autopairs'))
+    use(require('configure.telescope'))
+    use 'nvim-telescope/telescope-symbols.nvim'
+    use {'iamcco/markdown-preview.nvim', ft = 'markdown', run = 'cd app && yarn install'}
 
-  -- Theme
-  use 'folke/tokyonight.nvim'
-end)
+    -- Tim Pope
+    use 'tpope/vim-sleuth'
+
+    -- LSP + Syntax
+    use 'neovim/nvim-lspconfig'
+    use('ray-x/lsp_signature.nvim')
+    use 'hrsh7th/nvim-compe'
+    use 'onsails/lspkind-nvim'
+    --use(require('configure.lspkind'))
+    use({ 'dag/vim-fish', ft = 'fish' })
+    use 'sheerun/vim-polyglot'
+    --use {'prettier/vim-prettier', run = 'yarn install'}
+    use(require('configure.trouble'))
+    use 'fatih/vim-go' -- just used for gohtmltmpl syntax highlighting
+    use 'p00f/nvim-ts-rainbow'
+    use(require('configure.treesitter'))
+    use(require('configure.treesitter-playground'))
+
+    -- UI + Utils
+    use 'kyazdani42/nvim-web-devicons'
+    use {'yamatsum/nvim-nonicons', requires = {'kyazdani42/nvim-web-devicons'}}
+    use(require('configure.nvim-tree'))
+    use(require('configure.indent-blankline'))
+    use 'airblade/vim-gitgutter'
+    use(require('configure.lualine'))
+    use 'akinsho/nvim-bufferline.lua'
+    use(require('configure.colorizer'))
+    use(require('configure.dashboard'))
+    use('f-person/git-blame.nvim')
+    use 'kosayoda/nvim-lightbulb'
+    use 'RRethy/vim-illuminate'
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {}
+      end
+    }
+    --use(require('configure.nvim-notify'))
+
+    -- Theme
+    use(require('configure.tokyonight'))
+  end,
+  config = {
+    profile = {
+      enable = true,
+      threshold = 1,
+    },
+  },
+})
+
+-- Automatically set up config if we just bootstrapped packer by git cloning it
+if packer_bootstrap then
+  require('packer').sync()
+end
