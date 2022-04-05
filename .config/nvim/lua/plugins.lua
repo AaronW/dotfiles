@@ -44,7 +44,7 @@ packer.startup({
     use 'akinsho/nvim-bufferline.lua'
     use(require('configure.colorizer'))
     use(require('configure.dashboard'))
-    use('f-person/git-blame.nvim')
+    use(require('configure.git-blame'))
     use 'kosayoda/nvim-lightbulb'
     use 'RRethy/vim-illuminate'
     use {
