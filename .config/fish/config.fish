@@ -6,6 +6,7 @@ export EDITOR="nvim"
 
 fish_add_path "$HOME/Repos/1p/webbook/scripts"
 fish_add_path --path "$HOME/aaron/.nvm/versions/node/v14.17.0/bin"
+fish_add_path "$HOME/.cargo/bin"
 
 source $HOME/.config/fish/check-globals.fish
 source $HOME/.config/fish/aliases.fish
