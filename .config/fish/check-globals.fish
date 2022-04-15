@@ -39,40 +39,36 @@ function check_globals
         echo 'Install node.js via nvm'
     end
 
-    if ! type yarn >/dev/null
-        echo 'Install yarn: npm i -g yarn'
-    end
-
     if ! type prettier >/dev/null
-        echo 'Install prettier globally for vim integration: yarn global add prettier'
+        echo 'Install prettier globally for vim integration: npm i -g prettier'
     end
 
-    if ! type eslint_d &> /dev/null
-        echo 'Install eslint globally for Neovim integration: yarn global add eslint_d'
+    if ! type eslint_d &>/dev/null
+        echo "Install eslint_d globally for Neovim integration: npm i -g eslint_d"
     end
 
     if ! type typescript-language-server >/dev/null
-        echo 'Install tsserver globally for vim integration: yarn global add typescript typescript-language-server'
+        echo 'Install tsserver globally for vim integration: npm i -g typescript typescript-language-server'
     end
 
     if ! type vscode-css-language-server >/dev/null
-        echo 'Install tsserver globally for vim integration: yarn global add vscode-langservers-extracted'
+        echo 'Install tsserver globally for vim integration: npm i -g vscode-langservers-extracted'
     end
 
     if ! type diagnostic-languageserver >/dev/null
-        echo 'Install diagnostic-languageserver: yarn global add diagnostic-languageserver'
+        echo 'Install diagnostic-languageserver: npm i -g diagnostic-languageserver'
     end
 
     if ! type eslint >/dev/null
-        echo 'Install eslint globally for vim integration: yarn global add eslint'
+        echo 'Install eslint globally for vim integration: npm i -g eslint'
     end
 
     if ! type bash-language-server >/dev/null
-        echo 'Install bash-language-server: yarn global add bash-language-server'
+        echo 'Install bash-language-server: npm i -g bash-language-server'
     end
 
     if ! type neovim-node-host >/dev/null
-        echo 'Install neovim helper: yarn global add neovim'
+        echo 'Install neovim helper: npm i -g neovim'
     end
 
     if ! type cargo >/dev/null
