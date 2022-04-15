@@ -2,7 +2,6 @@ return {
     'kyazdani42/nvim-tree.lua',
     setup = function()
       -- TODO update these once they're implemented in the setup function
-      vim.g.nvim_tree_indent_markers = 1
       vim.g.nvim_tree_git_hl = 1
       vim.g.nvim_tree_add_trailing = 1
       vim.g.nvim_tree_special_files = {}
@@ -30,6 +29,7 @@ return {
         },
         open_on_setup = true,
         open_on_tab = true,
+        renderer = { indent_markers = { enable = true } },
         view = {
           width = 30,
           auto_resize = false,
