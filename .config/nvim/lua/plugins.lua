@@ -41,7 +41,7 @@ packer.startup({
     use(require('configure.indent-blankline'))
     use 'airblade/vim-gitgutter'
     use(require('configure.lualine'))
-    use 'akinsho/nvim-bufferline.lua'
+    use(require('configure.bufferline'))
     use(require('configure.colorizer'))
     use(require('configure.dashboard'))
     use(require('configure.git-blame'))
