@@ -37,6 +37,7 @@ packer.startup({
     -- UI + Utils
     use 'kyazdani42/nvim-web-devicons'
     use {'yamatsum/nvim-nonicons', requires = {'kyazdani42/nvim-web-devicons'}}
+    use(require('configure.gitsigns'))
     use(require('configure.nvim-tree'))
     use(require('configure.indent-blankline'))
     use 'airblade/vim-gitgutter'
@@ -44,7 +45,6 @@ packer.startup({
     use(require('configure.bufferline'))
     use(require('configure.colorizer'))
     use(require('configure.dashboard'))
-    use(require('configure.git-blame'))
     use 'kosayoda/nvim-lightbulb'
     use 'RRethy/vim-illuminate'
     use {
