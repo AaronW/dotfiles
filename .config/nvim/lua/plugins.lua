@@ -11,7 +11,7 @@ packer.startup({
       use('nvim-lua/plenary.nvim')
 
     -- Editing enhancements and tools
-    -- use(require('configure.autopairs'))
+    use(require('configure.autopairs'))
     use(require('configure.telescope'))
     use 'nvim-telescope/telescope-symbols.nvim'
     use {'iamcco/markdown-preview.nvim', ft = 'markdown', run = 'cd app && yarn install'}
@@ -21,8 +21,9 @@ packer.startup({
 
     -- LSP + Syntax
     use 'neovim/nvim-lspconfig'
+    use(require('configure.luasnip'))
+    use(require('configure.completion'))
     use('ray-x/lsp_signature.nvim')
-    use 'hrsh7th/nvim-compe'
     use 'onsails/lspkind-nvim'
     --use(require('configure.lspkind'))
     use({ 'dag/vim-fish', ft = 'fish' })

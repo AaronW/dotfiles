@@ -10,9 +10,6 @@ vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 vim.opt.syntax = 'on'
 
--- required for nvim-compe
-vim.o.completeopt = 'menuone,noselect'
-
 -- setting to 0 makes it default to value of tabstop
 vim.opt.shiftwidth = 0
 vim.opt.tabstop = 2
