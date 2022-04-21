@@ -7,22 +7,28 @@ return {
       vim.g.nvim_tree_special_files = {}
       vim.g.nvim_tree_auto_ignore_ft = { 'fzf', 'term', 'terminal' }
 
-    --   local lsp_icons = require('lsp.icons')
-    --   vim.g.nvim_tree_icons = {
-    --     lsp = {
-    --       hint = lsp_icons.Hint,
-    --       info = lsp_icons.Information,
-    --       warning = lsp_icons.Warning,
-    --       error = lsp_icons.Error,
-    --     },
-    --   }
+      local lsp_icons = require('lsp.icons')
+      vim.g.nvim_tree_icons = {
+        lsp = {
+          hint = lsp_icons.Hint,
+          info = lsp_icons.Information,
+          warning = lsp_icons.Warning,
+          error = lsp_icons.Error,
+        },
+      }
     end,
     config = function()
-      -- local icons = require('lsp.icons')
+      local icons = require('lsp.icons')
       local tree_cb = require('nvim-tree.config').nvim_tree_callback
       require('nvim-tree').setup({
         diagnostics = {
           enable = true,
+          icons = {
+            hint = icons.Hint,
+            info = icons.Info,
+            warning = icons.Warning,
+            error = icons.Error,
+          },
         },
         filters = {
           custom = { '.git', 'node_modules', '.cache', '.DS_Store', '.netrwhist', 'dist' }
