@@ -20,14 +20,14 @@ packer.startup({
     use 'tpope/vim-sleuth'
 
     -- LSP + Syntax
-    use 'neovim/nvim-lspconfig'
+    use(require('configure.lspconfig'))
     use(require('configure.luasnip'))
     use(require('configure.completion'))
-    use('ray-x/lsp_signature.nvim')
-    use 'onsails/lspkind-nvim'
-    --use(require('configure.lspkind'))
-    use({ 'dag/vim-fish', ft = 'fish' })
-    use 'sheerun/vim-polyglot'
+    -- use('ray-x/lsp_signature.nvim')
+    -- use 'onsails/lspkind-nvim'
+    -- --use(require('configure.lspkind'))
+    -- use({ 'dag/vim-fish', ft = 'fish' })
+    -- use 'sheerun/vim-polyglot'
     --use {'prettier/vim-prettier', run = 'yarn install'}
     use(require('configure.trouble'))
     use 'fatih/vim-go' -- just used for gohtmltmpl syntax highlighting
@@ -41,19 +41,19 @@ packer.startup({
     use(require('configure.gitsigns'))
     use(require('configure.nvim-tree'))
     use(require('configure.indent-blankline'))
-    use 'airblade/vim-gitgutter'
+    -- use 'airblade/vim-gitgutter'
     use(require('configure.lualine'))
     use(require('configure.bufferline'))
     use(require('configure.colorizer'))
     use(require('configure.dashboard'))
-    use 'kosayoda/nvim-lightbulb'
-    use 'RRethy/vim-illuminate'
-    use {
-      "folke/which-key.nvim",
-      config = function()
-        require("which-key").setup {}
-      end
-    }
+    -- use 'kosayoda/nvim-lightbulb'
+    -- use 'RRethy/vim-illuminate'
+    -- use {
+    --   "folke/which-key.nvim",
+    --   config = function()
+    --     require("which-key").setup {}
+    --   end
+    -- }
     --use(require('configure.nvim-notify'))
 
     -- Theme

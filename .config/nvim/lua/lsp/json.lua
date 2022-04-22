@@ -1,6 +1,5 @@
-local utils = require('lspconfig/util')
-
 require('lspconfig').jsonls.setup({
-  on_attach = require('lsp/utils').on_attach,
-  root_dir = utils.root_pattern('.git'),
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+  on_attach = require('lsp.utils').on_attach,
+  root_dir = require('lspconfig.util').root_pattern('.git'),
 })
