@@ -3,8 +3,10 @@ local M = {}
 local lsp_keymaps_bound_bufnrs = {}
 
 function M.default_keymaps()
-  local h = require('legendary.helpers')
-  return {}
+--   local h = require('legendary.helpers')
+  return {
+    { '<F3>', ':NvimTreeToggle<CR>', description = 'Toggle file tree' },
+  }
 end
 
 function M.lsp_keymaps(bufnr)
@@ -13,7 +15,7 @@ function M.lsp_keymaps(bufnr)
   end
 
   table.insert(lsp_keymaps_bound_bufnrs, bufnr)
-  local h = require('legendary.helpers')
+--   local h = require('legendary.helpers')
   return {}
 end
 

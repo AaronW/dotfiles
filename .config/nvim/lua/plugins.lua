@@ -7,8 +7,8 @@ packer.startup({
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-      -- Dependencies of other plugins
-      use('nvim-lua/plenary.nvim')
+    -- Dependencies of other plugins
+    use('nvim-lua/plenary.nvim')
 
     -- Editing enhancements and tools
     use(require('configure.autopairs'))
