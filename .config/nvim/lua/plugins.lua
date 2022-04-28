@@ -23,20 +23,12 @@ packer.startup({
     use(require('configure.lspconfig'))
     use(require('configure.luasnip'))
     use(require('configure.completion'))
-    -- use('ray-x/lsp_signature.nvim')
-    -- use 'onsails/lspkind-nvim'
-    -- --use(require('configure.lspkind'))
-    -- use({ 'dag/vim-fish', ft = 'fish' })
-    -- use 'sheerun/vim-polyglot'
-    --use {'prettier/vim-prettier', run = 'yarn install'}
     use(require('configure.trouble'))
-    use 'fatih/vim-go' -- just used for gohtmltmpl syntax highlighting
-    use 'p00f/nvim-ts-rainbow'
+    -- use 'p00f/nvim-ts-rainbow'
     use(require('configure.treesitter'))
     use(require('configure.treesitter-playground'))
 
     -- UI + Utils
-    use 'kyazdani42/nvim-web-devicons'
     use {'yamatsum/nvim-nonicons', requires = {'kyazdani42/nvim-web-devicons'}}
     use(require('configure.gitsigns'))
     use(require('configure.nvim-tree'))
@@ -47,12 +39,6 @@ packer.startup({
     use(require('configure.dashboard'))
     -- use 'kosayoda/nvim-lightbulb'
     -- use 'RRethy/vim-illuminate'
-    -- use {
-    --   "folke/which-key.nvim",
-    --   config = function()
-    --     require("which-key").setup {}
-    --   end
-    -- }
     --use(require('configure.nvim-notify'))
 
     -- Theme
