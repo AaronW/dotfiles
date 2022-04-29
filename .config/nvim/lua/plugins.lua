@@ -31,6 +31,7 @@ packer.startup({
     -- UI + Utils
     use {'yamatsum/nvim-nonicons', requires = {'kyazdani42/nvim-web-devicons'}}
     use(require('configure.gitsigns'))
+    use(require('configure.icons'))
     use(require('configure.nvim-tree'))
     use(require('configure.indent-blankline'))
     use(require('configure.lualine'))
