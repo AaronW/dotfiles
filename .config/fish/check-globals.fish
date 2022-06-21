@@ -43,6 +43,10 @@ function check_globals
         echo 'Install prettier globally for vim integration: npm i -g prettier'
     end
 
+    if ! type prettierd &>/dev/null
+        echo "Install prettierd globally for Neovim integration: npm i -g @fsouza/prettierd"
+    end
+
     if ! type eslint_d &>/dev/null
         echo "Install eslint_d globally for Neovim integration: npm i -g eslint_d"
     end
