@@ -4,15 +4,15 @@ return {
       -- TODO update these once they're implemented in the setup function
       vim.g.nvim_tree_auto_ignore_ft = { 'fzf', 'term', 'terminal' }
 
-      local lsp_icons = require('lsp.icons')
-      vim.g.nvim_tree_icons = {
-        lsp = {
-          hint = lsp_icons.Hint,
-          info = lsp_icons.Information,
-          warning = lsp_icons.Warning,
-          error = lsp_icons.Error,
-        },
-      }
+      -- local lsp_icons = require('lsp.icons')
+      -- vim.g.nvim_tree_icons = {
+      --   lsp = {
+      --     hint = lsp_icons.Hint,
+      --     info = lsp_icons.Information,
+      --     warning = lsp_icons.Warning,
+      --     error = lsp_icons.Error,
+      --   },
+      -- }
     end,
     config = function()
       local icons = require('lsp.icons')
