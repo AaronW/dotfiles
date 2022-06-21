@@ -2,9 +2,6 @@ return {
     'kyazdani42/nvim-tree.lua',
     setup = function()
       -- TODO update these once they're implemented in the setup function
-      vim.g.nvim_tree_git_hl = 1
-      vim.g.nvim_tree_add_trailing = 1
-      vim.g.nvim_tree_special_files = {}
       vim.g.nvim_tree_auto_ignore_ft = { 'fzf', 'term', 'terminal' }
 
       local lsp_icons = require('lsp.icons')
@@ -35,7 +32,12 @@ return {
         },
         open_on_setup = true,
         open_on_tab = true,
-        renderer = { indent_markers = { enable = true } },
+        renderer = {
+          add_trailing = true,
+          highlight_git = true,
+          indent_markers = { enable = true },
+          special_files = {}
+        },
         view = {
           width = 30,
           auto_resize = false,
