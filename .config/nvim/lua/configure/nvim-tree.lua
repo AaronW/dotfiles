@@ -18,6 +18,11 @@ return {
       local icons = require('lsp.icons')
       local tree_cb = require('nvim-tree.config').nvim_tree_callback
       require('nvim-tree').setup({
+        actions = {
+          open_file = {
+            resize_window = false
+          }
+        },
         diagnostics = {
           enable = true,
           icons = {
@@ -40,7 +45,6 @@ return {
         },
         view = {
           width = 30,
-          auto_resize = false,
           mappings = {
             custom_only = true,
             list = {
