@@ -20,6 +20,7 @@ packer.startup({
     use 'tpope/vim-sleuth'
 
     -- LSP + Syntax
+    use(require('configure.mason'))
     use(require('configure.lspconfig'))
     use(require('configure.luasnip'))
     use(require('configure.completion'))
