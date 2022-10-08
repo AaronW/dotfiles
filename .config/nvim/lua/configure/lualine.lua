@@ -54,7 +54,7 @@ return {
 
     require('lualine').setup({
       options = {
-        theme = 'tokyonight',
+        theme = 'catppuccin',
         disabled_filetypes = {'NvimTree', 'term', 'terminal'},
       },
       sections = {

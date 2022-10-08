@@ -44,7 +44,7 @@ packer.startup({
     --use(require('configure.nvim-notify'))
 
     -- Theme
-    use(require('configure.tokyonight'))
+    use(require('configure.catppuccin'))
   end,
   config = {
     profile = {

@@ -3,8 +3,6 @@ return {
   requires = { 'p00f/nvim-ts-rainbow', 'nvim-treesitter/nvim-treesitter-textobjects' },
   run = ':TSUpdateSync',
   config = function()
-    local colors = require('tokyonight.colors').setup()
-
     require('nvim-treesitter.configs').setup({
       highlight = {
         enable = true,
@@ -20,15 +18,6 @@ return {
         enable = true,
         extended_mode = true,
         max_file_lines = 1500,
-        colors = {
-          colors.blue,
-          colors.yellow,
-          colors.magenta,
-          colors.red,
-          colors.orange,
-          colors.cyan,
-          colors.green,
-        }
       },
     })
   end,
