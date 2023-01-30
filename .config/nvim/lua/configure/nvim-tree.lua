@@ -35,7 +35,6 @@ return {
         filters = {
           custom = { '.git', 'node_modules', '.cache', '.DS_Store', '.netrwhist', 'dist' }
         },
-        open_on_setup = true,
         open_on_tab = true,
         renderer = {
           add_trailing = true,
