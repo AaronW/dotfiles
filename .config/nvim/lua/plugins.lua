@@ -15,6 +15,7 @@ packer.startup({
     use(require('configure.telescope'))
     use 'nvim-telescope/telescope-symbols.nvim'
     use {'iamcco/markdown-preview.nvim', ft = 'markdown', run = 'cd app && yarn install'}
+    use(require('configure.neotest'))
 
     -- Tim Pope
     use 'tpope/vim-sleuth'
