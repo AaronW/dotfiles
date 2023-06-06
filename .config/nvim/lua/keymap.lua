@@ -74,6 +74,7 @@ function M.cmp_mappings()
       'i',
       'c',
     }),
+    -- ['<C-t'] = require("neotest").run.run(),
   }
 end
 
