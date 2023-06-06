@@ -28,3 +28,9 @@ map('n', 'fh', t':lua require("telescope.builtin").oldfiles()<CR>', { silent = t
 map('n', '<leader>v', t':vsplit<CR>:lua require("telescope.builtin").find_files()<CR>', { silent = true })
 -- <leader>b to vert split, then find open buffers to put in the new pane
 map('n', '<leader>b', t':vsplit<CR>:lua require("telescope.builtin").buffers()<CR>', { silent = true })
+
+-----------------
+-- Neotest
+-----------------
+map('n', '<leader>q', t'lua require("neotest").run.run()', { silent = true })
+map('n', '<leader>tt', t'lua require("neotest").run.run(vim.fn.expand("%"))', { silent = true })
