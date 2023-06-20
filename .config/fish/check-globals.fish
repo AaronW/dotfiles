@@ -31,12 +31,12 @@ function check_globals
         echo 'Install RipGrep: https://github.com/BurntSushi/ripgrep'
     end
 
-    if ! type nvm >/dev/null
-        echo 'Install nvm.fish: https://github.com/jorgebucaran/nvm.fish'
+    if ! type fnm >/dev/null
+        echo 'Install fnm: https://github.com/Schniz/fnm#fish-shell'
     end
 
     if ! type node >/dev/null
-        echo 'Install node.js via nvm'
+        echo 'Install node.js via fnm'
     end
 
     if ! type prettier >/dev/null
