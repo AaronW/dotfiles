@@ -62,7 +62,6 @@ return {
     end,
     config = function()
       local icons = require('lsp.icons')
-      -- local tree_cb = require('nvim-tree.config').nvim_tree_callback
       require('nvim-tree').setup({
         actions = {
           open_file = {
