@@ -1,6 +1,6 @@
 return {
     'neovim/nvim-lspconfig',
-    requires = {
+    dependencies = {
       'jose-elias-alvarez/null-ls.nvim',
     },
     config = function()

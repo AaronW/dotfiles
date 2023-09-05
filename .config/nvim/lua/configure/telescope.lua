@@ -1,9 +1,9 @@
 return {
   'nvim-telescope/telescope.nvim',
-  requires = {
+  dependencies = {
     'nvim-telescope/telescope-symbols.nvim',
     'folke/trouble.nvim',
-    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   config = function()
     -- local actions = require('telescope.actions')

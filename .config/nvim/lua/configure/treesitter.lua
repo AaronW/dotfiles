@@ -1,7 +1,7 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  requires = { 'p00f/nvim-ts-rainbow', 'nvim-treesitter/nvim-treesitter-textobjects' },
-  run = ':TSUpdateSync',
+  dependencies = { 'p00f/nvim-ts-rainbow', 'nvim-treesitter/nvim-treesitter-textobjects' },
+  build = ':TSUpdateSync',
   config = function()
     require('nvim-treesitter.configs').setup({
       highlight = {

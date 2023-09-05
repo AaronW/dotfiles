@@ -1,9 +1,9 @@
 return {
   'williamboman/mason.nvim',
-  requires = {
+  dependencies = {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
   },
-  before = 'nvim-lspconfig',
+  -- before = 'nvim-lspconfig', # TODO Migrate this to lazy.nvim or delete?
   config = function()
     require('mason').setup()
     require('mason-tool-installer').setup({

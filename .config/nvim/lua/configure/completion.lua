@@ -1,6 +1,6 @@
 return {
     'hrsh7th/nvim-cmp',
-    requires = {
+    dependencies = {
       'onsails/lspkind-nvim',
       'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-buffer',
@@ -11,7 +11,7 @@ return {
       'hrsh7th/cmp-cmdline',
       { 'mtoohey31/cmp-fish', ft = 'fish' },
     },
-    after = { 'nvim-autopairs', 'LuaSnip' },
+    -- after = { 'nvim-autopairs', 'LuaSnip' }, # Move to `dependencies` if still needed
     config = function()
       local luasnip = require('luasnip')
       luasnip.config.setup({

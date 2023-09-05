@@ -46,7 +46,7 @@ end
 
 return {
     'kyazdani42/nvim-tree.lua',
-    setup = function()
+    init = function()
       -- TODO update these once they're implemented in the setup function
       vim.g.nvim_tree_auto_ignore_ft = { 'fzf', 'term', 'terminal' }
 
@@ -62,7 +62,7 @@ return {
     end,
     config = function()
       local icons = require('lsp.icons')
-      local tree_cb = require('nvim-tree.config').nvim_tree_callback
+      -- local tree_cb = require('nvim-tree.config').nvim_tree_callback
       require('nvim-tree').setup({
         actions = {
           open_file = {

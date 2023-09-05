@@ -1,6 +1,6 @@
 return {
     'akinsho/nvim-bufferline.lua',
-    requires = { 'famiu/bufdelete.nvim' },
+    dependencies = { 'famiu/bufdelete.nvim' },
     config = function()
       require('bufferline').setup({
         options = {
