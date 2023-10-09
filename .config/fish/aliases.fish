@@ -1,5 +1,8 @@
 alias sourcefish="source ~/.config/fish/config.fish && echo 'Fish shell profile reloaded.'"
 
+alias n="netlify"
+alias nd="netlify dev"
+
 # Alias for dotfiles management
 alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
