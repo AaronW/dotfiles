@@ -11,12 +11,12 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
-# alias ls to exa with compatibility aliases
-alias ls="exa -a --icons --color=always -s type -F"
-alias la="ls -a"
-alias ll="ls -l --git"
-alias l="ls -laH"
-alias lg="ls -lG"
+# alias ls to eza with compatibility aliases
+alias ls="eza -a --icons --color=always -s type -F"
+alias la="eza -a"
+alias ll="eza -l --git"
+alias l="eza -laH"
+alias lg="eza -lG"
 
 function nuke
     docker kill (docker ps --format "{{.Names}}")
