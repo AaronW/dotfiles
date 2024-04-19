@@ -5,6 +5,7 @@ return {
     'nvim-neotest/neotest-go',
     'haydenmeade/neotest-jest',
     'rouge8/neotest-rust',
+    'nvim-neotest/nvim-nio',
   },
   ft = require('lsp.filetypes').filetypes,
   config = function()
