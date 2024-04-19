@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-export EDITOR="lvim"
+export EDITOR="nvim"
 
 set -x HOMEBREW_NO_ANALYTICS 1
 
@@ -14,3 +14,4 @@ source $HOME/.config/fish/check-globals.fish
 source $HOME/.config/fish/aliases.fish
 
 starship init fish | source
+op completion fish | source
