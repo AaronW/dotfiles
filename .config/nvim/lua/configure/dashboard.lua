@@ -1,15 +1,15 @@
 return {
-  'glepnir/dashboard-nvim',
+  'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   config = function()
     require('dashboard').setup {
       -- config
+      theme = 'hyper',
     }
   end,
   dependencies = { {'nvim-tree/nvim-web-devicons'}}
 }
 
--- return {
 --   'glepnir/dashboard-nvim',
 --   config = function()
 --     local db = require('dashboard')
