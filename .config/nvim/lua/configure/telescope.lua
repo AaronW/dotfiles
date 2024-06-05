@@ -7,7 +7,7 @@ return {
   },
   config = function()
     -- local actions = require('telescope.actions')
-    local trouble = require('trouble.providers.telescope')
+    local open_with_trouble = require("trouble.sources.telescope").open
 
     require('telescope').setup({
       defaults = {
@@ -26,8 +26,13 @@ return {
         file_sorter = require('telescope.sorters').get_fuzzy_file,
         dynamic_preview_title = true,
         mappings = {
-          i = { ["<c-t>"] = trouble.open_with_trouble },
-          n = { ["<c-t>"] = trouble.open_with_trouble },
+          i = { ["<c-t>"] = open_with_trouble },
+          n = { ["<c-t>"] = open_with_trouble },
+        },
+      },
+      path_display = {
+        filename_first = {
+          reverse_directories = false
         }
       },
       pickers = {
