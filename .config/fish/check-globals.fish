@@ -75,8 +75,8 @@ function check_globals
         echo 'Install rustup: curl --proto \'=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
     end
 
-    if ! type exa >/dev/null
-        echo 'Install exa: brew install exa'
+    if ! type eza >/dev/null
+        echo 'Install eza: brew install exa'
     end
 
     if ! type stylua >/dev/null
